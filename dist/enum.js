@@ -1,4 +1,4 @@
-/* typed-enum 0.1.0 2013-12-26T03:08:20.349Z
+/* typed-enum 0.1.1 2013-12-26T09:54:25.111Z
  * Author: hax <johnhax@gmail.com>
  * License: MIT
  */
