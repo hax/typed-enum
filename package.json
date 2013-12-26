@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "build-module": "bin/build-module",
-    "compress": "uglifyjs dist/enum.js -mc -r require -o dist/enum.min.js --source-map dist/enum.js.map -p relative",
+    "compress": "uglifyjs dist/enum.js -mc -r require -o dist/enum.min.js --source-map dist/enum.min.map -p relative",
     "build": "npm run build-module && npm test && npm run compress"
   },
   "repository": {
