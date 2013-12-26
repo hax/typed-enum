@@ -1,6 +1,6 @@
 {
   "name": "typed-enum",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Enum factory in typed JavaScript",
   "main": "dist/enum.js",
   "scripts": {
