@@ -31,6 +31,7 @@ npm install typed-enum
 ### Download
 
   [Download the compressed, production file](https://raw.github.com/hax/typed-enum/master/dist/enum.min.js)
+
   [Download the uncompressed, development file](https://raw.github.com/hax/typed-enum/master/dist/enum.min.js)
   and
   [the source map file](https://raw.github.com/hax/typed-enum/master/dist/enum.min.map)
