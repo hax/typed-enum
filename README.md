@@ -36,6 +36,8 @@ npm install typed-enum
 
 ### Bower
 
+  [![Bower version](https://badge.fury.io/bo/typed-enum.png)](http://badge.fury.io/bo/typed-enum)
+
 ```sh
 bower install typed-enum
 ```
