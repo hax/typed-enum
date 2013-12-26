@@ -1,0 +1,73 @@
+#!/usr/bin/env node
+
+'use strict'
+
+var fs = require('fs')
+
+function my(js) {
+
+	var moduleDefinitions = {exports: [], imports: []}
+
+	function addImports() {
+		//no imports now
+	}
+	function addExports() {
+		for (var i = 0, n = arguments.length; i < n; i++) {
+			var arg = arguments[i]
+			if (typeof arg === 'string')
+				moduleDefinitions.exports.push({id: arg, as: arg})
+			else if (Object.getPrototypeOf(arg) === Object.prototype)
+				for (var key in arg) {
+					if (arg.propertyIsEnumerable(key)) {
+						if (typeof arg[key] === 'string')
+							moduleDefinitions.exports.push({id: arg[key], as: key})
+						else throw SyntaxError()
+					}
+				}
+			else throw SyntaxError()
+		}
+	}
+
+	new Function('imports', 'exports', js)(addImports, addExports)
+
+	return moduleDefinitions
+}
+
+
+var mod, code = ''
+
+fs.readdirSync(__dirname + '/../src').forEach(function(f){
+	if (f === 'my.js') {
+		mod = my(fs.readFileSync(__dirname + '/../src/my.js'))
+	} else {
+		code += ';\n// Begin ' + f + '\n'
+		code += fs.readFileSync(__dirname + '/../src/' + f)
+		code += '\n// End ' + f + '\n'
+	}
+})
+
+var imports = ''
+var defaultExport
+var pds = mod.exports.map(function(ex){
+	if (ex.as === 'default') defaultExport = ex
+	return '	"' + ex.as + '": { get: function () { return ' + ex.id + ' } }'
+})
+var exports = 'Object.defineProperties(exports, {\n' + pds.join(',\n') + '\n})\n'
+if (defaultExport) exports +=
+	'Object.defineProperty(module, "exports", {\n' +
+	'	get: function () { return ' + defaultExport.id + ' }' +
+	'\n})\n'
+
+var tpl = fs.readFileSync(__dirname + '/module-template.js')
+var pkg = require('../package.json')
+var result = String(tpl).replace(/\$\w+/g, function (m) {
+	switch (m) {
+		case '$imports': return imports
+		case '$exports': return exports
+		case '$code': return code
+		case '$time': return new Date().toISOString()
+		default: return pkg[m.slice(1)]
+	}
+})
+
+fs.writeFileSync(__dirname + '/../dist/enum.js', result)

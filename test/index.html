@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<title>Testing typed-enum</title>
+<link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+<script src="../node_modules/mocha/mocha.js"></script>
+<script>
+mocha.setup('tdd')
+function assert(test) {
+	if (!test) throw new Error
+}
+</script>
+</head>
+<body>
+
+	<div id="mocha"></div>
+	<script src="../dist/enum.min.js"></script>
+	<script>Enum = MY_MODULES['typed-enum'].exports</script>
+	<script src="test.js"></script>
+	<script>mocha.run()</script>
+
+</body>
+</html>
