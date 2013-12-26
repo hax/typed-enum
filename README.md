@@ -3,7 +3,6 @@
   Enum Factory in Typed JavaScript.
 
   [![Build Status](https://travis-ci.org/hax/typed-enum.png)](https://travis-ci.org/hax/typed-enum)
-  [![NPM version](https://badge.fury.io/js/typed-enum.png)](http://badge.fury.io/js/typed-enum)
 
 ## Example
 
@@ -22,6 +21,8 @@ Sex('male') === Sex.MALE && Sex('female') === Sex.FEMALE
 ## Install
 
 ### NPM
+
+  [![NPM version](https://badge.fury.io/js/typed-enum.png)](http://badge.fury.io/js/typed-enum)
 
 ```sh
 npm install typed-enum
