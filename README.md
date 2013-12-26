@@ -59,3 +59,21 @@ var Enum = MY_MODULES['typed-enum'].exports
 </script>
 ```
 
+## Development
+
+### Build
+
+```sh
+npm run build
+```
+
+### Test in Node.js
+
+```sh
+npm test
+```
+
+### Test in browsers
+
+test/index.html
+
