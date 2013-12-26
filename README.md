@@ -1,5 +1,9 @@
-# typed-enum -- Enum Factory in Typed JavaScript
-[![Build Status](https://travis-ci.org/hax/typed-enum.png)](https://travis-ci.org/hax/typed-enum)
+# typed-enum
+
+  Enum Factory in Typed JavaScript.
+
+  [![Build Status](https://travis-ci.org/hax/typed-enum.png)](https://travis-ci.org/hax/typed-enum)
+  [![NPM version](https://badge.fury.io/js/typed-enum.png)](http://badge.fury.io/js/typed-enum)
 
 ## Install
 ```sh
