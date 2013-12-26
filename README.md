@@ -20,6 +20,14 @@ Sex('male') === Sex.MALE && Sex('female') === Sex.FEMALE
 
 ## Install
 
+### Download Latest
+
+  [Download the compressed, production file](https://raw.github.com/hax/typed-enum/master/dist/enum.min.js)
+
+  [Download the uncompressed, development file](https://raw.github.com/hax/typed-enum/master/dist/enum.min.js)
+  and
+  [the source map file](https://raw.github.com/hax/typed-enum/master/dist/enum.min.map)
+
 ### NPM
 
   [![NPM version](https://badge.fury.io/js/typed-enum.png)](http://badge.fury.io/js/typed-enum)
@@ -27,14 +35,6 @@ Sex('male') === Sex.MALE && Sex('female') === Sex.FEMALE
 ```sh
 npm install typed-enum
 ```
-
-### Download
-
-  [Download the compressed, production file](https://raw.github.com/hax/typed-enum/master/dist/enum.min.js)
-
-  [Download the uncompressed, development file](https://raw.github.com/hax/typed-enum/master/dist/enum.min.js)
-  and
-  [the source map file](https://raw.github.com/hax/typed-enum/master/dist/enum.min.map)
 
 ### Bower
 
@@ -44,7 +44,7 @@ npm install typed-enum
 bower install typed-enum
 ```
 
-## Usage
+## Import
 
 ### CommonJS (Node.js), AMD (RequireJS), CMD (Sea.js)
 ```JavaScript
@@ -61,6 +61,10 @@ var Enum = MY_MODULES['typed-enum'].exports
 
 ## Development
 
+### Issues
+
+  https://github.com/hax/typed-enum/issues
+
 ### Build
 
 ```sh
@@ -75,5 +79,4 @@ npm test
 
 ### Test in browsers
 
-test/index.html
-
+open ```test/index.html```
