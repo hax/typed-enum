@@ -13,8 +13,12 @@ npm install typed-enum
 ## Usage
 
 ### Import
+### Bower
 
 #### CommonJS (Node.js), AMD (RequireJS), CMD (Sea.js)
+```sh
+bower install typed-enum
+```
 ```JavaScript
 var Enum = require('typed-enum/dist/enum.min.js')
 ```
