@@ -1,5 +1,7 @@
 # typed-enum
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hax/typed-enum.svg)](https://greenkeeper.io/)
+
   Enum Factory in Typed JavaScript.
 
   [![Build Status](https://travis-ci.org/hax/typed-enum.png)](https://travis-ci.org/hax/typed-enum)
