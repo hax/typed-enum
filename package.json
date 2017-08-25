@@ -25,7 +25,7 @@
     "url": "https://github.com/hax/typed-enum/issues"
   },
   "devDependencies": {
-    "better-assert": "~1.0.0",
+    "better-assert": "1.0.1",
     "mocha": "~3.5.0",
     "uglify-js": "~3.0.11"
   }
