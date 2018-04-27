@@ -4,4 +4,5 @@ node_js:
   - "0.10"
   - "0.8"
   - "0.6"
+  - "10"
 before_script: npm run build-module
